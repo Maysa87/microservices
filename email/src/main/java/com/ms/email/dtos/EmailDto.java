@@ -7,6 +7,5 @@ public record EmailDto(
         String emailTo,
         String subject,
         String text) {
-
 }
 

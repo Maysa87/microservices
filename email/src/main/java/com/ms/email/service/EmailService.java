@@ -1,6 +1,7 @@
 package com.ms.email.service;
 
 import com.ms.email.entity.EmailEntity;
+import com.ms.email.enums.StatusEmail;
 import com.ms.email.repositories.EmailRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;
@@ -38,7 +39,7 @@ public class EmailService {
 
             emailEntity.setStatusEmail(StatusEmail.SENT);
         } catch (MailException e){
-            emailModel.setStatusEmail(StatusEmail.ERROR);
+            emailEntity.setStatusEmail(StatusEmail.ERROR);
         } finally {
             return emailRepository.save(emailEntity);
         }

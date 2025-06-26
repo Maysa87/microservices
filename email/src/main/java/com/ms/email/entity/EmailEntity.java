@@ -1,6 +1,6 @@
 package com.ms.email.entity;
 
-import com.ms.email.enums.StatusEmail;
+import com.ms.email.enums.*;
 import jakarta.persistence.*;
 
 import java.io.Serial;
